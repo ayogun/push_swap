@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+//chec if the chracter is negative
 int	sign(int c)
 {
 	if (c == '+' || c == '-')
@@ -19,6 +20,7 @@ int	sign(int c)
 	return (0);
 }
 
+//check if the character is digit
 int	digit(int c)
 {
 	if ((c >= 48) && (c <= 57))
@@ -26,6 +28,7 @@ int	digit(int c)
 	return (0);
 }
 
+//check if character is space character
 int	space(int c)
 {
 	if (c == ' ')
@@ -33,6 +36,7 @@ int	space(int c)
 	return (0);
 }
 
+//function to check if given arguments is valid
 int	check_error(char **argv, int i, int j)
 {
 	while (argv[i])
@@ -61,6 +65,7 @@ int	check_error(char **argv, int i, int j)
 	return (true);
 }
 
+//function which checks the character if it is alphanumerical
 int	ft_isalpha(int c)
 {
 	if ((c >= 58 && c <= 126) || (c >= 33 && c <= 42)
@@ -69,6 +74,7 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
+//function to add a new node to the stack from back side
 void	ft_add_back(t_stack **stack, t_stack *stack_new)
 {
 	t_stack	*tmp1;
