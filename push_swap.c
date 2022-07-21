@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/05/12 20:08:35 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/21 11:08:52 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,9 +218,10 @@ int main(int argc, char **argv)
 		ft_error();
 	//create the stack
 	list_args(argv, &stack_a);
-	n1 = stack_a->nbr;
-	stack_a = stack_a->next;
-	printf("%ld\n", stack_a->nbr + n1);
+	 n1 = stack_a->nbr;
+	 //printf("%d\n", n1);
+	// stack_a = stack_a->next;
+	// 
 	// printf("%c\n", argv[1][2]);
 	// for(int i = 1; i < argc; i++)
 	// {
