@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/21 11:08:52 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/22 19:18:38 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,99 +74,9 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-//function to add a new node to the stack from back side
-void	ft_add_back(t_stack **stack, t_stack *stack_new)
-{
-	t_stack	*tmp1;
 
-	tmp1 = *stack;
-	if (tmp1 == NULL)
-	{
-		stack_new->next = NULL;
-		stack_new->prev = NULL;
-		*stack = stack_new;
-	}
-	else if (tmp1->next == NULL)
-	{
-		tmp1->next = stack_new;
-		tmp1->prev = NULL;
-		stack_new->prev = tmp1;
-		stack_new->next = NULL;
-	}
-	else
-	{
-		tmp1 = tmp1->prev;
-		tmp1->next = stack_new;
-		tmp1->next->prev = tmp1;
-		tmp1 = tmp1->next;
-		tmp1->next = *stack;
-		(*stack)->prev = tmp1;
-	}	
-}
 
-t_stack	*ft_stack_new(long content)
-{
-	t_stack	*new;
-	
-	//We are creating neccessary free memory space in the RAM.
-	new = (t_stack *)malloc(sizeof(t_stack));
-	//We are protecting our memory allocation to avoid potential leakages.
-	if (new == NULL)
-		return (NULL);
-	//In case of everything is okay, we put the argument ,which come to the function with the name of "content", into nbr value-
-	//which is a member of the "new" node. Next is current pointing the NULL. We will link that list into our stack with ft_add_back.
-	new->nbr = content;
-	new->next = NULL;
-	return (new);
-}
 
-int	ft_atoi(const char *str)
-{
-	int	res;
-	int	isnegative;
-	int	i;
-
-	res = 0;
-	i = 0;
-	isnegative = 0;
-	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
-		i++;
-	//We check whether the value is negative or not
-	if (str[i] == '-')
-		isnegative = 1;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	//We are making an ASCII check just in case. If everything is okay we make necessary math operations to turn our string-
-	//into an integer value. Our purpose to turn the value into integer, is the neccessity of doing math operations in arguments.
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		res *= 10;
-		res += ((int)str[i] - 48);
-		i++;
-	}
-	//If our isnegative value gives as '1' which means "true", it will lead us into our if condition and append a negative sign-
-	//to the integer value.
-	if (isnegative)
-		return (-res);
-	else
-		return (res);
-}
-
-void	list_args(char **argv, t_stack **stack_a)
-{
-	long	i;
-
-	i = 1;
-	while (argv[i] != NULL)
-	{
-			//While arguments are valid, we start to add them into stack here one by one with while loop.
-			//Atoi takes the number and turn it into an integer value where we can make math operations.
-			//With stack new we create a new node for the current argument without linking it to list.
-			//We make linking stage in ft_add_back call.
-			ft_add_back(stack_a, ft_stack_new(ft_atoi(argv[i])));
-		i++;
-	}
-}
 
 void	ft_error(void)
 {	
@@ -207,6 +117,7 @@ int	check_args(char **argv)
 int main(int argc, char **argv)
 {
 	t_stack	*stack_a;
+	t_stack *tmp;
 	int n1;
 	
 	stack_a = NULL;
@@ -214,12 +125,35 @@ int main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	//check if the arguments are valid
-	else if (!check_args(argv))
-		ft_error();
+	//else if (!check_args(argv))
+		//ft_error();
 	//create the stack
 	list_args(argv, &stack_a);
-	 n1 = stack_a->nbr;
-	 //printf("%d\n", n1);
+	
+	printf("**********************\n");
+	tmp = stack_a;
+	printf("tmp->nbr : %ld\n", tmp->nbr);
+	tmp = tmp->next;
+		printf("tmp->nbr : %ld\n", tmp->nbr);
+	tmp = tmp->next;
+		printf("tmp->nbr : %ld\n", tmp->nbr);
+	tmp = tmp->next;
+	// while (tmp != stack_a)
+	// {
+	// 	printf("tmp->nbr : %ld\n", tmp->nbr);
+	// 	tmp = tmp->next;
+	// //  n1 = stack_a->nbr;
+	// //  printf("%d\n", n1);
+	// //  stack_a = stack_a->next;
+	// //  n1 = stack_a->nbr;
+	// //  printf("%d\n", n1);
+	// //  stack_a = stack_a->next;
+	// //  n1 = stack_a->nbr;
+	// //  printf("%d\n", n1);
+	// }
+	 printf("**********************\n");
+
+	 
 	// stack_a = stack_a->next;
 	// 
 	// printf("%c\n", argv[1][2]);
