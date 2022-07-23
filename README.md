@@ -1,7 +1,5 @@
 # Push_Swap
 
-#### Final Score 105/100
-
 ## Challenge
 
 Sort a random list of integers using the smallest number of moves, 2 stacks
