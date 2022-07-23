@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 10:29:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/22 18:18:17 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/23 08:56:55 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ t_stack	*ft_stack_new(long content)
 	//which is a member of the "new" node. Next is current pointing the NULL. We will link that list into our stack with ft_add_back.
 	new->nbr = content;
 	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }

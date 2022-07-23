@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/22 19:18:38 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/23 09:05:50 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,7 @@ int main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack *tmp;
 	int n1;
+	int iter;
 	
 	stack_a = NULL;
 	//check if there are enough arguments
@@ -131,13 +132,21 @@ int main(int argc, char **argv)
 	list_args(argv, &stack_a);
 	
 	printf("**********************\n");
+	//print the stack
 	tmp = stack_a;
-	printf("tmp->nbr : %ld\n", tmp->nbr);
-	tmp = tmp->next;
-		printf("tmp->nbr : %ld\n", tmp->nbr);
-	tmp = tmp->next;
-		printf("tmp->nbr : %ld\n", tmp->nbr);
-	tmp = tmp->next;
+	while(tmp)
+	{
+		printf("%ld\n", tmp->nbr);
+		tmp = tmp->next;
+	}
+	
+	// tmp = stack_a;
+	// printf("tmp->nbr : %ld\n", tmp->nbr);
+	// tmp = tmp->next;
+	// 	printf("tmp->nbr : %ld\n", tmp->nbr);
+	// tmp = tmp->next;
+	//  	printf("tmp->nbr : %ld\n", tmp->nbr);
+	// // tmp = tmp->next;
 	// while (tmp != stack_a)
 	// {
 	// 	printf("tmp->nbr : %ld\n", tmp->nbr);
@@ -153,7 +162,14 @@ int main(int argc, char **argv)
 	// }
 	 printf("**********************\n");
 
+	iter = 0;
+	while (stack_a)
+	{
+		stack_a = stack_a->next;
+		iter++;
+	}
 	 
+	 printf("iter : %d\n", iter);
 	// stack_a = stack_a->next;
 	// 
 	// printf("%c\n", argv[1][2]);
