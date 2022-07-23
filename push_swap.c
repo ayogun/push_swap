@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/23 09:05:50 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/23 14:10:11 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,20 +118,23 @@ int main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack *tmp;
-	int n1;
+
 	int iter;
 	
 	stack_a = NULL;
+	
 	//check if there are enough arguments
 	if (argc < 2)
 		return (0);
 	//check if the arguments are valid
 	//else if (!check_args(argv))
 		//ft_error();
+		
 	//create the stack
 	list_args(argv, &stack_a);
 	
 	printf("**********************\n");
+	
 	//print the stack
 	tmp = stack_a;
 	while(tmp)
@@ -139,27 +142,7 @@ int main(int argc, char **argv)
 		printf("%ld\n", tmp->nbr);
 		tmp = tmp->next;
 	}
-	
-	// tmp = stack_a;
-	// printf("tmp->nbr : %ld\n", tmp->nbr);
-	// tmp = tmp->next;
-	// 	printf("tmp->nbr : %ld\n", tmp->nbr);
-	// tmp = tmp->next;
-	//  	printf("tmp->nbr : %ld\n", tmp->nbr);
-	// // tmp = tmp->next;
-	// while (tmp != stack_a)
-	// {
-	// 	printf("tmp->nbr : %ld\n", tmp->nbr);
-	// 	tmp = tmp->next;
-	// //  n1 = stack_a->nbr;
-	// //  printf("%d\n", n1);
-	// //  stack_a = stack_a->next;
-	// //  n1 = stack_a->nbr;
-	// //  printf("%d\n", n1);
-	// //  stack_a = stack_a->next;
-	// //  n1 = stack_a->nbr;
-	// //  printf("%d\n", n1);
-	// }
+
 	 printf("**********************\n");
 
 	iter = 0;
@@ -170,11 +153,4 @@ int main(int argc, char **argv)
 	}
 	 
 	 printf("iter : %d\n", iter);
-	// stack_a = stack_a->next;
-	// 
-	// printf("%c\n", argv[1][2]);
-	// for(int i = 1; i < argc; i++)
-	// {
-	// 	printf("%s\n", argv[i]);
-	// }
 }

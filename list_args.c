@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:12:47 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/22 18:12:48 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/23 15:07:05 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 void	list_args(char **argv, t_stack **stack_a)
 {
 	long	i;
+
 
 	i = 1;
 	while (argv[i] != NULL)

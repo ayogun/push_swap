@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 10:26:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/23 09:06:27 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/23 15:15:01 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,18 @@
 void	ft_add_back(t_stack **stack, t_stack *stack_new)
 {
 	t_stack	*head;
-	t_stack	*tail;
-
+	t_stack *tail;
+	
 	head = *stack;
+	
+
+		
+
+		
 	//If there is no node yet
 	if (head == NULL)
 	{
+		tail = NULL;
 		printf(""); //if I delete this line, my code doesn't work. LOL
 		stack_new->next = NULL;
 		stack_new->prev = NULL;
