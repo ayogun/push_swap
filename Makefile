@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/07/23 15:12:05 by yogun            ###   ########.fr        #
+#    Updated: 2022/07/26 20:45:43 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,9 @@ SRC =	push_swap.c \
 		ft_add_back.c \
 		ft_atoi.c \
 		ft_stack_new.c \
-		list_args.c 
+		list_args.c \
+		error_print.c \
+		check_args.c 
 
 OBJ = ${SRC:.c=.o}
 
