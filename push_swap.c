@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/26 20:42:40 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/26 21:09:30 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int main(int argc, char **argv)
 		
 	//create the stack
 	list_args(argv, &stack_a);
+
+	ft_ra(&stack_a, 1);
 	
 	printf("**********************\n");
 	
@@ -51,4 +53,6 @@ int main(int argc, char **argv)
 	}
 	 
 	 printf("iter : %d\n", iter);
+
+
 }

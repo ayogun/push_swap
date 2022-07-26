@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/26 20:44:58 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/26 21:07:43 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int			sign(int c);
 int			digit(int c);
 int			space(int c);
 void		ft_error(void);
+void		ft_ra(t_stack **a, int j);
+t_stack		*ft_lstlast(t_stack *lst);
 
 #endif
