@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/27 19:52:29 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/28 19:20:24 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ int main(int argc, char **argv)
 		
 	//create the stack
 	list_args(argv, &stack_a);
-
+	
+	if (!stack_a || ft_checkdup(stack_a))
+	{
+		ft_free(&stack_a);
+		ft_error();
+	}
+	
 	ft_rra(&stack_a, 1);
 	
 	printf("**********************\n");
