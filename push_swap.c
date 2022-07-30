@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/30 09:59:21 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/30 18:15:59 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ int main(int argc, char **argv)
 		ft_free(&stack_a);
 		ft_error();
 	}
-	
-	ft_sort(&stack_a);
+
 	//ft_rra(&stack_a, 1);
 	
 	printf("**********************\n");
@@ -49,8 +48,26 @@ int main(int argc, char **argv)
 		printf("%ld\n", tmp->nbr);
 		tmp = tmp->next;
 	}
+	printf("**********************\n");
+	
+	// while(ft_checksorted(stack_a) == 0)
+	// {
+	// 	ft_sort(&stack_a);
+	// }
 
-	 printf("**********************\n");
+	ft_rra(&stack_a, 1);
+	
+	
+	printf("**********************\n");
+	
+	//print the stack
+	while(tmp)
+	{
+		printf("%ld\n", tmp->nbr);
+		tmp = tmp->next;
+	}
+	tmp = stack_a;
+	printf("**********************\n");
 
 	
 	iter = ft_lstsize(stack_a);
