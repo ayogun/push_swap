@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/28 19:08:09 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/29 17:14:44 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
 int			ft_lstrchr(t_stack *a, int nbr);
 int			ft_find_place_b(t_stack *b, int c);
-
+void		ft_sort(t_stack **stack_a);
 
 
 #endif

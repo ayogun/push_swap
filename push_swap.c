@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/28 21:33:10 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/29 17:09:24 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int main(int argc, char **argv)
 		ft_error();
 	}
 	
+	ft_sort(&stack_a);
 	//ft_rra(&stack_a, 1);
 	
 	printf("**********************\n");
@@ -58,8 +59,6 @@ int main(int argc, char **argv)
 	int min = ft_min(stack_a);
 	printf("min : %d\n", min);
 
-	int x = ft_lstrchr(stack_a, min);
-	printf("Doktor bu ne : %d\n", x);
 
 
 }
