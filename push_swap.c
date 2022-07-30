@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/29 17:09:24 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/30 09:59:21 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ int main(int argc, char **argv)
 	int min = ft_min(stack_a);
 	printf("min : %d\n", min);
 
-
+	if(ft_checksorted(stack_a))
+		printf("sorted\n");
+	else
+		printf("not sorted\n");
 
 }

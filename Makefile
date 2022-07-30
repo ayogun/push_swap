@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/07/28 21:13:08 by yogun            ###   ########.fr        #
+#    Updated: 2022/07/30 09:59:56 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRC =	push_swap.c \
 		operations.c \
 		ft_sort.c \
 		lst_utils.c \
+		check_sorted.c \
 		
 
 OBJ = ${SRC:.c=.o}

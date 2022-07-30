@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*   check_sorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 19:19:40 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/30 09:57:24 by yogun            ###   ########.fr       */
+/*   Created: 2022/07/30 09:54:08 by yogun             #+#    #+#             */
+/*   Updated: 2022/07/30 09:57:08 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort(t_stack **stack_a)
+int	ft_checksorted(t_stack *stack_a)
 {
-	int stack_size;
+	int	i;
 
-	stack_size = ft_lstsize(*stack_a);
-	
-	if(stack_size <= 3)
+	i = stack_a->nbr;
+	while (stack_a)
 	{
+		if (i > stack_a->nbr)
+			return (0);
+		i = stack_a->nbr;
+		stack_a = stack_a->next;
 	}
-	else if(stack_size > 3 && stack_size <= 100)
-		printf("100 eleman");
-	else
-		printf("büyük");
+	return (1);
 }
