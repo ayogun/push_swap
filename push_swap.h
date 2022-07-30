@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/30 17:47:10 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/30 18:36:25 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int			ft_lstrchr(t_stack *a, int nbr);
 int			ft_find_place_b(t_stack *b, int c);
 void		ft_sort(t_stack **stack_a);
 int			ft_checksorted(t_stack *stack_a);
-void		ft_sort_three(t_stack *stack_a);
+void		ft_sort_three(t_stack **stack_a);
 
 
 #endif
