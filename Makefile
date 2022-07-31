@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/07/31 13:20:34 by yogun            ###   ########.fr        #
+#    Updated: 2022/07/31 14:54:58 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC =	srcs/push_swap.c \
 		srcs/operations.c \
 		srcs/operations_2.c \
 		srcs/ft_sort.c \
+		srcs/ft_sort_medium.c \
 		srcs/lst_utils.c \
 		srcs/lst_utils_2.c \
 		srcs/ft_check_sorted.c \
