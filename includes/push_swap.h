@@ -6,11 +6,9 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/30 18:36:25 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/31 14:08:02 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -60,6 +58,5 @@ int			ft_find_place_b(t_stack *b, int c);
 void		ft_sort(t_stack **stack_a);
 int			ft_checksorted(t_stack *stack_a);
 void		ft_sort_three(t_stack **stack_a);
-
 
 #endif

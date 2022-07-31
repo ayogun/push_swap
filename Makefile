@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/07/30 09:59:56 by yogun            ###   ########.fr        #
+#    Updated: 2022/07/31 13:20:34 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,25 +27,34 @@ WHITE = \033[0;97m
 
 
 NAME = push_swap
-CC = cc
+CC = gcc
 RM = rm -f
 FLAGS = -Wall -Wextra -Werror
 LIBFTDIR = ./libft
+OBJ_DIR = obj/
 
-SRC =	push_swap.c \
-		ft_add_back.c \
-		ft_atoi.c \
-		ft_stack_new.c \
-		list_args.c \
-		error_print.c \
-		check_args.c \
-		operations.c \
-		ft_sort.c \
-		lst_utils.c \
-		check_sorted.c \
+SRC_DIR = srcs/
+
+SRC =	srcs/push_swap.c \
+		srcs/ft_add_back.c \
+		srcs/ft_atoi.c \
+		srcs/ft_stack_new.c \
+		srcs/ft_list_args.c \
+		srcs/ft_error_print.c \
+		srcs/ft_check_args.c \
+		srcs/operations.c \
+		srcs/operations_2.c \
+		srcs/ft_sort.c \
+		srcs/lst_utils.c \
+		srcs/lst_utils_2.c \
+		srcs/ft_check_sorted.c \
+		srcs/ft_check_dup.c \
+		srcs/ft_free.c \
+		srcs/ft_check_utils.c \
 		
 
 OBJ = ${SRC:.c=.o}
+
 
 .c.o:
 	${CC} -c $< -o ${<:.c=.o}

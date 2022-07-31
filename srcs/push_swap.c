@@ -6,25 +6,21 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:39:36 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/30 18:44:10 by yogun            ###   ########.fr       */
+/*   Updated: 2022/07/31 14:08:32 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	t_stack *tmp;
+	t_stack	*tmp;
+	int		iter;
 
-	int iter;
-	
 	stack_a = NULL;
-	
-	//check if there are enough arguments
 	if (argc < 2)
 		return (0);
-	//check if the arguments are valid
 	else if (!check_args(argv))
 		ft_error();
 		
@@ -65,10 +61,9 @@ int main(int argc, char **argv)
 
 	int min = ft_min(stack_a);
 	printf("min : %d\n", min);
-
-	if(ft_checksorted(stack_a))
+	
+	if (ft_checksorted(stack_a))
 		printf("sorted\n");
 	else
 		printf("not sorted\n");
-
 }
