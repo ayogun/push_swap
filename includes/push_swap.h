@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 14:54:05 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:14:25 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_stack
 {
 	long			nbr;
+	long			index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;

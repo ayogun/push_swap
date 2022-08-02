@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:13 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 15:20:06 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:51:05 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ int	ft_lstrchr(t_stack *a, int nbr)
 	i = 0;
 	while (a->nbr != nbr)
 	{
-		i++;
 		a = a->next;
+		i++;
 	}
+	a->index = 0;
 	return (i);
 }
 
