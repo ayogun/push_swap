@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:43:54 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 16:20:57 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,10 @@ void		ft_error(void);
 void		ft_free(t_stack **lst);
 t_stack		*ft_lstlast(t_stack *lst);
 void		ft_ra(t_stack **a, int j);
+void		ft_rb(t_stack **b, int j);
 void		ft_sa(t_stack **a, int j);
 void		ft_pa(t_stack **a, t_stack **b, int j);
+void		ft_pb(t_stack **stack_a, t_stack **stack_b, int j);
 void		ft_rra(t_stack **a, int j);
 void		ft_ss(t_stack **a, t_stack **b, int j);
 void		ft_rr(t_stack **a, t_stack **b, int j);
@@ -56,13 +58,30 @@ int			ft_lstsize(t_stack *lst);
 int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
 int			ft_lstrchr(t_stack *a, int nbr);
+int			ft_find_place(t_stack *stack_b, int nbr_to_be_pushed);
 int			ft_find_place_b(t_stack *b, int c);
+int			ft_find_place_a(t_stack *a, int nbr);
 void		ft_sort(t_stack **stack_a);
 int			ft_checksorted(t_stack *stack_a);
-void		ft_sort_medium(t_stack **stack_a);
+void		ft_sort_big(t_stack **stack_a);
 void		ft_sort_three(t_stack **stack_a);
 t_stack		*ft_parse(int argc, char **argv);
 t_stack		*ft_parse_args_quoted(char **argv);
 void		ft_freestr(char **lst);
+int			ft_case_rarb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarrb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rarrb_a(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarb_a(t_stack *a, t_stack *b, int c);
+int			ft_smallest_a(t_stack *a, t_stack *b);
+int			ft_case_rarb(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarrb(t_stack *a, t_stack *b, int c);
+int			ft_case_rrarb(t_stack *a, t_stack *b, int c);
+int			ft_case_rarrb(t_stack *a, t_stack *b, int c);
+int			ft_smallest_b(t_stack *a, t_stack *b);
+int			ft_print_rarb(t_stack **a, t_stack **b, int c, char s);
+int			ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s);
+int			ft_print_rrarb(t_stack **a, t_stack **b, int c, char s);
+int			ft_print_rarrb(t_stack **a, t_stack **b, int c, char s);
+void		ft_rrb(t_stack **b, int j);
 
 #endif

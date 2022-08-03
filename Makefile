@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/08/03 13:53:02 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/03 16:19:43 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SRC =	srcs/push_swap.c \
 		srcs/operations.c \
 		srcs/operations_2.c \
 		srcs/ft_sort.c \
-		srcs/ft_sort_medium.c \
+		srcs/ft_sort_big.c \
 		srcs/lst_utils.c \
 		srcs/lst_utils_2.c \
 		srcs/ft_check_sorted.c \
@@ -54,6 +54,11 @@ SRC =	srcs/push_swap.c \
 		srcs/ft_check_utils.c \
 		srcs/ft_parse.c \
 		srcs/ft_parse_args_quoted.c \
+		srcs/ft_sort_three.c \
+		srcs/solver_utils.c \
+		srcs/solver_utils_2.c \
+		srcs/ft_print_utils.c \
+		srcs/operations_3.c \
 		
 
 OBJ = ${SRC:.c=.o}

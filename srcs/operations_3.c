@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_medium.c                                   :+:      :+:    :+:   */
+/*   operations_3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/02 16:12:42 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/03 16:17:44 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/03 16:18:13 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_sort_medium(t_stack **stack_a)
+void	ft_rb(t_stack **b, int j)
 {
-	t_stack	*stack_b;
-	int min;
+	t_stack	*tmp;
 
-	min = ft_min(*stack_a);
-	stack_b = NULL;
-	while (*stack_a)
-	{
-		
-	}
-
+	if (!*b || !(*b)->next)
+		return ;
+	tmp = *b;
+	*b = ft_lstlast(*b);
+	(*b)->next = tmp;
+	*b = tmp->next;
+	tmp->next = NULL;
+	if (j == 0)
+		write(1, "rb\n", 3);
 }
