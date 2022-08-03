@@ -6,13 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:13 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:20:38 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 16:38:26 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_lstrchr(t_stack *a, int nbr)
+int	ft_find_index(t_stack *a, int nbr)
 {
 	int		i;
 
@@ -35,7 +35,7 @@ int	ft_find_place_b(t_stack *b, int nbr)
 	if (nbr > b->nbr && nbr < ft_lstlast(b)->nbr)
 		i = 0;
 	else if (nbr > ft_max(b) || nbr < ft_min(b))
-		i = ft_lstrchr(b, ft_max(b));
+		i = ft_find_index(b, ft_max(b));
 	else
 	{
 		tmp = b->next;
@@ -58,7 +58,7 @@ int	ft_find_place_a(t_stack *a, int nbr)
 	if (nbr < a->nbr && nbr > ft_lstlast(a)->nbr)
 		i = 0;
 	else if (nbr > ft_max(a) || nbr < ft_min(a))
-		i = ft_lstrchr(a, ft_min(a));
+		i = ft_find_index(a, ft_min(a));
 	else
 	{
 		tmp = a->next;

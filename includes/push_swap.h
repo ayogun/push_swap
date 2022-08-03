@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:20:57 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 16:36:18 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_stack		*ft_lstlast(t_stack *lst);
 int			ft_lstsize(t_stack *lst);
 int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
-int			ft_lstrchr(t_stack *a, int nbr);
+int			ft_find_index(t_stack *a, int nbr);
 int			ft_find_place(t_stack *stack_b, int nbr_to_be_pushed);
 int			ft_find_place_b(t_stack *b, int c);
 int			ft_find_place_a(t_stack *a, int nbr);
