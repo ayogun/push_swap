@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*   ft_parse.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 19:19:40 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 15:10:51 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/03 20:55:28 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-
-void	ft_sort(t_stack **stack_a)
+t_stack	*ft_parse(int argc, char **argv)
 {
-	int	stack_size;
+	t_stack	*stack_a;
+	int		i;
+	int		j;
 
-	stack_size = ft_lstsize(*stack_a);
-	if (stack_size == 2)
-		ft_sa(stack_a, 0);
-	else if (stack_size == 3)
-	{
-		ft_sort_three(stack_a);
-	}
+	i = 1;
+	stack_a = NULL;
+	if (argc < 2)
+		ft_error();
+	else if (argc == 2)
+	 	stack_a = ft_parse_args_quoted(argv);
 	else
-		ft_sort_big(stack_a);
+	{
+		list_args(argv, &stack_a);
+	}
+	return (stack_a);
 }

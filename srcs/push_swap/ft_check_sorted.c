@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:54:08 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 14:05:57 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:54:59 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	ft_checksorted(t_stack *stack_a)
 {

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_dup.c                                        :+:      :+:    :+:   */
+/*   ft_stack_new.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/31 12:16:11 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 12:16:39 by yogun            ###   ########.fr       */
+/*   Created: 2022/07/22 10:29:05 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/03 20:55:44 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int	ft_checkdup(t_stack *a)
+t_stack	*ft_stack_new(long content)
 {
-	t_stack	*tmp;
+	t_stack	*new;
 
-	while (a)
-	{
-		tmp = a->next;
-		while (tmp)
-		{
-			if (a->nbr == tmp->nbr)
-				return (1);
-			tmp = tmp->next;
-		}
-		a = a->next;
-	}
-	return (0);
+	new = (t_stack *)malloc(sizeof(t_stack));
+	if (new == NULL)
+		return (NULL);
+	new->nbr = content;
+	new->next = NULL;
+	new->prev = NULL;
+	return (new);
 }

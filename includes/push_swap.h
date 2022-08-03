@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:36:18 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 21:35:13 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,10 @@ int			ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s);
 int			ft_print_rrarb(t_stack **a, t_stack **b, int c, char s);
 int			ft_print_rarrb(t_stack **a, t_stack **b, int c, char s);
 void		ft_rrb(t_stack **b, int j);
+void		ft_check_sub(t_stack **a, t_stack **b, char *line);
+char		*ft_check(t_stack **a, t_stack **b, char *line);
+void		ft_checker(t_stack **a, t_stack **b, char *line);
+t_stack		*ft_process(int argc, char **argv);
+void	ft_sb(t_stack **b, int j);
 
 #endif

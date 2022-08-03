@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:12:47 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 13:13:51 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:55:19 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 // While arguments are valid, we start to add them 
 // into stack here one by one with while loop.

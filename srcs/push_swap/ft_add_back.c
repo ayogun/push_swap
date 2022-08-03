@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 10:26:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 14:05:31 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:54:38 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 //function to add a new node to the stack from back side
 void	ft_add_back(t_stack **stack, t_stack *stack_new)

@@ -1,28 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations_3.c                                     :+:      :+:    :+:   */
+/*   ft_parse_args_quoted.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 16:17:44 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:18:13 by yogun            ###   ########.fr       */
+/*   Created: 2022/08/03 12:29:31 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/03 20:55:25 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-void	ft_rb(t_stack **b, int j)
+void	ft_freestr(char **lst)
 {
-	t_stack	*tmp;
+	char	*n1;
 
-	if (!*b || !(*b)->next)
+	if (!lst)
 		return ;
-	tmp = *b;
-	*b = ft_lstlast(*b);
-	(*b)->next = tmp;
-	*b = tmp->next;
-	tmp->next = NULL;
-	if (j == 0)
-		write(1, "rb\n", 3);
+	while (*lst)
+	{
+		n1 = *lst;
+		lst++;
+		free(n1);
+	}
+	*lst = NULL;
+}
+
+t_stack	*ft_parse_args_quoted(char **argv)
+{
+	t_stack	*stack_a;
+	char	**tmp;
+	int		i;
+	int		j;
+
+	stack_a = NULL;
+	i = 0;
+	tmp = ft_split(argv[1], 32);
+	list_args(tmp, &stack_a);
+	ft_freestr(tmp);
+	free(tmp);
+	return (stack_a);
 }

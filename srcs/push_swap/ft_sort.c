@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/31 12:17:58 by yogun             #+#    #+#             */
-/*   Updated: 2022/07/31 12:18:28 by yogun            ###   ########.fr       */
+/*   Created: 2022/07/28 19:19:40 by yogun             #+#    #+#             */
+/*   Updated: 2022/08/03 20:55:41 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-void	ft_free(t_stack **lst)
+
+void	ft_sort(t_stack **stack_a)
 {
-	t_stack	*tmp;
+	int	stack_size;
 
-	if (!lst)
-		return ;
-	while (*lst)
+	stack_size = ft_lstsize(*stack_a);
+	if (stack_size == 2)
+		ft_sa(stack_a, 0);
+	else if (stack_size == 3)
 	{
-		tmp = (*lst)->next;
-		(*lst)->nbr = 0;
-		free(*lst);
-		*lst = tmp;
+		ft_sort_three(stack_a);
 	}
+	else
+		ft_sort_big(stack_a);
 }

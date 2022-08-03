@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 16:04:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:05:19 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:55:32 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	ft_print_rarb(t_stack **a, t_stack **b, int c, char s)
 {

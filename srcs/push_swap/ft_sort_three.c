@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:10:59 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 15:11:25 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:55:39 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	ft_sort_three(t_stack **stack_a)
 {

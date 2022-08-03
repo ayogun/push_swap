@@ -6,12 +6,15 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 13:44:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:44:43 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 21:11:38 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -65,5 +68,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_putnbr_fd(int n, int fd);
+char	*get_next_line(int fd);
+char	*read_function(int fd, char *str);
+char	*ft_getline(char *full_str);
+char	*ft_getrest(char *full_str);
 
 #endif

@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 19:01:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:37:10 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:55:52 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 t_stack	*ft_lstlast(t_stack *lst)
 {

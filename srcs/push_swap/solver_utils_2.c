@@ -6,11 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:59:45 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 16:40:08 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 20:56:09 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	ft_case_rarb(t_stack *a, t_stack *b, int c)
 {
