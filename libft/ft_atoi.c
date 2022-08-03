@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:06:34 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/06 03:01:20 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+int	ft_atoi(const char *str)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	int	res;
+	int	isnegative;
+	int	i;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
+	res = 0;
+	i = 0;
+	isnegative = 0;
+	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
+		isnegative = 1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] >= 48 && str[i] <= 57)
 	{
-		list_args(argv, &stack_a);
+		res *= 10;
+		res += ((int)str[i] - 48);
+		i++;
 	}
-	return (stack_a);
+	if (isnegative)
+		return (-res);
+	else
+		return (res);
 }

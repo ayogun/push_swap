@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 21:03:37 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/06 02:58:51 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	t_list	*new_lst;
+	t_list	*new_node;
+	t_list	*orig;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
+	new_lst = NULL;
+	orig = lst;
+	while (orig)
 	{
-		list_args(argv, &stack_a);
+		new_node = ft_lstnew(f(orig->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		else
+			ft_lstadd_back(&new_lst, new_node);
+		orig = orig->next;
 	}
-	return (stack_a);
+	return (new_lst);
 }

@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/02 16:14:25 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/03 13:43:54 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
@@ -60,5 +61,8 @@ void		ft_sort(t_stack **stack_a);
 int			ft_checksorted(t_stack *stack_a);
 void		ft_sort_medium(t_stack **stack_a);
 void		ft_sort_three(t_stack **stack_a);
+t_stack		*ft_parse(int argc, char **argv);
+t_stack		*ft_parse_args_quoted(char **argv);
+void		ft_freestr(char **lst);
 
 #endif

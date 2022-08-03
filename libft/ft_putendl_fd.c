@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:47:05 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/05 21:22:48 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+void	ft_putendl_fd(char *s, int fd)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
-
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
-	{
-		list_args(argv, &stack_a);
-	}
-	return (stack_a);
+	if (!s || fd < 0)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

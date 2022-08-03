@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:46:40 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/05 21:23:00 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	size_t	i;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
-	{
-		list_args(argv, &stack_a);
-	}
-	return (stack_a);
+	i = 0;
+	while (i < n && ((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
+		i++;
+	if (i == n)
+		return (0);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

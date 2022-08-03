@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:46:35 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/05 21:23:02 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	size_t			i;
+	unsigned char	*str;
+	unsigned char	character;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
+	str = (unsigned char *)s;
+	character = (unsigned char)c;
+	i = 0;
+	while (i < n)
 	{
-		list_args(argv, &stack_a);
+		if (*str == character)
+		{
+			return (str);
+		}
+		str++;
+		i++;
 	}
-	return (stack_a);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/07/31 14:54:58 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/03 13:53:02 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ NAME = push_swap
 CC = gcc
 RM = rm -f
 FLAGS = -Wall -Wextra -Werror
-LIBFTDIR = ./libft
+LIBFTDIR = libft/
 OBJ_DIR = obj/
 
 SRC_DIR = srcs/
@@ -52,21 +52,29 @@ SRC =	srcs/push_swap.c \
 		srcs/ft_check_dup.c \
 		srcs/ft_free.c \
 		srcs/ft_check_utils.c \
+		srcs/ft_parse.c \
+		srcs/ft_parse_args_quoted.c \
 		
 
 OBJ = ${SRC:.c=.o}
-
+INCLUDE = -L ./libft -lft
 
 .c.o:
 	${CC} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJ}
-	${CC} ${FLAGS} ${OBJ} ${INCLUDE} -o ${NAME} 
+	make -C $(LIBFTDIR)
+	${CC} ${FLAGS} ${OBJ} -o ${NAME} ${INCLUDE}
 
+	
 
 clean:
 	${RM} ${OBJ} ${NAME}
-	
+	@cd $(LIBFTDIR) && $(MAKE) clean
+
+fclean: clean
+	${RM} ${NAME}
+	@cd $(LIBFTDIR) && $(MAKE) fclean
 
 re: clean all
 

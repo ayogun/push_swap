@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:06:53 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/05 21:25:00 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+t_list	*ft_lstnew(void *content)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	t_list	*elt;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
-	{
-		list_args(argv, &stack_a);
-	}
-	return (stack_a);
+	elt = (t_list *)malloc(sizeof(*elt));
+	if (!elt)
+		return (NULL);
+	elt->content = content;
+	elt->next = NULL;
+	return (elt);
 }

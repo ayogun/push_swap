@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 13:11:04 by yogun            ###   ########.fr       */
+/*   Created: 2022/04/05 20:46:50 by yogun             #+#    #+#             */
+/*   Updated: 2022/04/05 21:22:56 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-t_stack	*ft_parse(int argc, char **argv)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	t_stack	*stack_a;
-	int		i;
-	int		j;
+	unsigned char	*dst2;
+	unsigned char	*src2;
 
-	i = 1;
-	stack_a = NULL;
-	if (argc < 2)
-		ft_error();
-	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
-	else
+	dst2 = (unsigned char *)dst;
+	src2 = (unsigned char *)src;
+	if (src < dst)
 	{
-		list_args(argv, &stack_a);
+		src2 = src2 + len - 1;
+		dst2 = dst2 + len - 1;
+		while (len--)
+			*dst2-- = *src2--;
 	}
-	return (stack_a);
+	else if (src >= dst)
+	{
+		while (len--)
+			*dst2++ = *src2++;
+	}
+	return (dst);
 }
