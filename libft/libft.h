@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 13:44:29 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 21:11:38 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/04 18:08:07 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_sub(char **ost, char **line);
+char	*ft_sub1(char **ost, char **line, char **buf);
 char	*get_next_line(int fd);
-char	*read_function(int fd, char *str);
-char	*ft_getline(char *full_str);
-char	*ft_getrest(char *full_str);
+
+// char	*get_next_line(int fd);
+// char	*read_function(int fd, char *str);
+// char	*ft_getline(char *full_str);
+// char	*ft_getrest(char *full_str);
 
 #endif

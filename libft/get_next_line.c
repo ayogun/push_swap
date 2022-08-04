@@ -6,110 +6,84 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:07:48 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 21:10:54 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/04 18:08:51 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
+char	*ft_sub(char **ost, char **line)
+{
+	char	*s;
+
+	s = NULL;
+	if (*ost)
+	{
+		*line = *ost;
+		s = ft_strchr(*ost, '\n');
+		if (s)
+		{
+			s++;
+			if (*s != '\0')
+				*ost = ft_strdup(s);
+			else
+				*ost = NULL;
+			*s = '\0';
+		}
+		else
+			*ost = NULL;
+	}
+	else
+	{
+		*line = (char *)malloc(sizeof(char) * 1);
+		*line[0] = '\0';
+	}
+	return (s);
+}
+
+char	*ft_sub1(char **ost, char **line, char **buf)
+{
+	char	*s;
+	char	*tmp;
+
+	s = ft_strchr(*buf, '\n');
+	if (s)
+	{
+		s++;
+		if (*s != '\0')
+			*ost = ft_strdup(s);
+		*s = '\0';
+	}
+	tmp = *line;
+	*line = ft_strjoin(*line, *buf);
+	free(tmp);
+	return (s);
+}
+
 char	*get_next_line(int fd)
 {
-	static char	*full_str[1024];
+	char		*buf;
+	int			i;
+	char		*s;
+	static char	*ost[1024];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (0);
-	full_str[fd] = read_function(fd, full_str[fd]);
-	if (!full_str[fd])
+	if (BUFFER_SIZE < 1 || read(fd, 0, 0) == -1 || fd < 0)
 		return (NULL);
-	line = ft_getline(full_str[fd]);
-	full_str[fd] = ft_getrest(full_str[fd]);
-	return (line);
-}
-
-/**
- * read the first line of a file descriptor
- */
-char	*read_function(int fd, char *str)
-{
-	char	*tmp;
-	int		bytes;
-
-	tmp = malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!tmp)
+	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buf)
 		return (NULL);
-	bytes = 1;
-	while (!ft_strchr(str, '\n') && (bytes != 0))
+	s = ft_sub(&ost[fd], &line);
+	i = 1;
+	while (!s && i)
 	{
-		bytes = read(fd, tmp, BUFFER_SIZE);
-		if (bytes == -1)
-		{
-			free(tmp);
-			return (NULL);
-		}
-		tmp[bytes] = '\0';
-		str = ft_strjoin(str, tmp);
+		i = read(fd, buf, BUFFER_SIZE);
+		buf[i] = '\0';
+		s = ft_sub1(&ost[fd], &line, &buf);
 	}
-	free(tmp);
-	return (str);
-}
-
-/**
- * from the read string, take the first line and returns it
- */
-char	*ft_getline(char *full_str)
-{
-	int		i;
-	char	*line;
-
-	i = 0;
-	if (!full_str[i])
-		return (NULL);
-	while (full_str[i] && full_str[i] != '\n')
-		i++;
-	line = (char *)malloc(sizeof(char) * (i + 2));
-	if (!line)
-		return (NULL);
-	i = 0;
-	while (full_str[i] && full_str[i] != '\n')
-	{
-		line[i] = full_str[i];
-		i++;
-	}
-	if (full_str[i] == '\n')
-	{
-		line[i] = full_str[i];
-		i++;
-	}
-	line[i] = '\0';
-	return (line);
-}
-
-/**
- * from the read string, take the first line and remove it. returns the rest
- */
-char	*ft_getrest(char *full_str)
-{
-	int		i;
-	int		j;
-	char	*restof;
-
-	i = 0;
-	while (full_str[i] && full_str[i] != '\n')
-		i++;
-	if (!full_str[i])
-	{
-		free(full_str);
-		return (NULL);
-	}
-	restof = (char *)malloc(sizeof(char) * (ft_strlen(full_str) - i + 1));
-	if (!restof)
-		return (NULL);
-	i++;
-	j = 0;
-	while (full_str[i])
-		restof[j++] = full_str[i++];
-	restof[j] = '\0';
-	free(full_str);
-	return (restof);
+	free(buf);
+	if (ft_strlen(line) > 0)
+		return (line);
+	free (line);
+	return (NULL);
 }

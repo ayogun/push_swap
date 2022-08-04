@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/04 09:40:34 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/04 16:41:58 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ char		*ft_check(t_stack **a, t_stack **b, char *line);
 void		ft_checker(t_stack **a, t_stack **b, char *line);
 t_stack		*ft_process(int argc, char **argv);
 void		ft_sb(t_stack **b, int j);
+void 		algorithm(int argc, char **argv);
 
 #endif
