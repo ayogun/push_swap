@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 19:01:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:52 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/04 09:40:14 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,20 @@ int	ft_max(t_stack *a)
 	return (i);
 }
 
-int	ft_find_place(t_stack *stack_b, int nbr_to_be_pushed)
+int	ft_find_place(t_stack *stack_b, int nbr_push)
 {
 	int		i;
 	t_stack	*tmp;
 
 	i = 1;
-	if (nbr_to_be_pushed > stack_b->nbr && nbr_to_be_pushed < ft_lstlast(stack_b)->nbr)
+	if (nbr_push > stack_b->nbr && nbr_push < ft_lstlast(stack_b)->nbr)
 		i = 0;
-	else if (nbr_to_be_pushed > ft_max(stack_b) || nbr_to_be_pushed < ft_min(stack_b))
+	else if (nbr_push > ft_max(stack_b) || nbr_push < ft_min(stack_b))
 		i = ft_find_index(stack_b, ft_max(stack_b));
 	else
 	{
 		tmp = stack_b->next;
-		while (stack_b->nbr < nbr_to_be_pushed || tmp->nbr > nbr_to_be_pushed)
+		while (stack_b->nbr < nbr_push || tmp->nbr > nbr_push)
 		{
 			stack_b = stack_b->next;
 			tmp = stack_b->next;

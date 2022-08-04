@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 21:35:13 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/04 09:40:34 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int			ft_lstsize(t_stack *lst);
 int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
 int			ft_find_index(t_stack *a, int nbr);
-int			ft_find_place(t_stack *stack_b, int nbr_to_be_pushed);
+int			ft_find_place(t_stack *stack_b, int nbr_push);
 int			ft_find_place_b(t_stack *b, int c);
 int			ft_find_place_a(t_stack *a, int nbr);
 void		ft_sort(t_stack **stack_a);
@@ -87,6 +87,6 @@ void		ft_check_sub(t_stack **a, t_stack **b, char *line);
 char		*ft_check(t_stack **a, t_stack **b, char *line);
 void		ft_checker(t_stack **a, t_stack **b, char *line);
 t_stack		*ft_process(int argc, char **argv);
-void	ft_sb(t_stack **b, int j);
+void		ft_sb(t_stack **b, int j);
 
 #endif
