@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:13:33 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:28 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/05 14:37:14 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_stack	*ft_parse(int argc, char **argv)
 	if (argc < 2)
 		ft_error();
 	else if (argc == 2)
-	 	stack_a = ft_parse_args_quoted(argv);
+		stack_a = ft_parse_args_quoted(argv);
 	else
 	{
 		list_args(argv, &stack_a);

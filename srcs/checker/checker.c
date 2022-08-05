@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:46:09 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 21:32:47 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/05 14:44:34 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*ft_process(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	
+
 	stack_a = ft_parse(argc, argv);
 	if (argc < 2)
 		ft_error();
@@ -23,10 +23,10 @@ t_stack	*ft_process(int argc, char **argv)
 		stack_a = ft_parse_args_quoted(argv);
 	else
 	{
-		if(!check_args(argv))
+		if (!check_args(argv))
 			ft_error();
 		else
-			list_args(argv, &stack_a);	
+			list_args(argv, &stack_a);
 	}
 	return (stack_a);
 }

@@ -6,12 +6,11 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 19:19:40 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:41 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/05 14:34:05 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
 
 void	ft_sort(t_stack **stack_a)
 {

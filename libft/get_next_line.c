@@ -6,66 +6,66 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:07:48 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/04 18:08:51 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/05 14:27:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char	*ft_sub(char **ost, char **line)
+char	*ft_sub(char **rest, char **line)
 {
-	char	*s;
+	char	*str;
 
-	s = NULL;
-	if (*ost)
+	str = NULL;
+	if (*rest)
 	{
-		*line = *ost;
-		s = ft_strchr(*ost, '\n');
-		if (s)
+		*line = *rest;
+		str = ft_strchr(*rest, '\n');
+		if (str)
 		{
-			s++;
-			if (*s != '\0')
-				*ost = ft_strdup(s);
+			str++;
+			if (*str != '\0')
+				*rest = ft_strdup(str);
 			else
-				*ost = NULL;
-			*s = '\0';
+				*rest = NULL;
+			*str = '\0';
 		}
 		else
-			*ost = NULL;
+			*rest = NULL;
 	}
 	else
 	{
 		*line = (char *)malloc(sizeof(char) * 1);
 		*line[0] = '\0';
 	}
-	return (s);
+	return (str);
 }
 
-char	*ft_sub1(char **ost, char **line, char **buf)
+char	*ft_sub_2(char **rest, char **line, char **buf)
 {
-	char	*s;
+	char	*str;
 	char	*tmp;
 
-	s = ft_strchr(*buf, '\n');
-	if (s)
+	str = ft_strchr(*buf, '\n');
+	if (str)
 	{
-		s++;
-		if (*s != '\0')
-			*ost = ft_strdup(s);
-		*s = '\0';
+		str++;
+		if (*str != '\0')
+			*rest = ft_strdup(str);
+		*str = '\0';
 	}
 	tmp = *line;
 	*line = ft_strjoin(*line, *buf);
 	free(tmp);
-	return (s);
+	return (str);
 }
 
 char	*get_next_line(int fd)
 {
 	char		*buf;
 	int			i;
-	char		*s;
-	static char	*ost[1024];
+	char		*str;
+	static char	*rest[1024];
 	char		*line;
 
 	if (BUFFER_SIZE < 1 || read(fd, 0, 0) == -1 || fd < 0)
@@ -73,13 +73,13 @@ char	*get_next_line(int fd)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return (NULL);
-	s = ft_sub(&ost[fd], &line);
+	str = ft_sub(&rest[fd], &line);
 	i = 1;
-	while (!s && i)
+	while (!str && i)
 	{
 		i = read(fd, buf, BUFFER_SIZE);
 		buf[i] = '\0';
-		s = ft_sub1(&ost[fd], &line, &buf);
+		str = ft_sub_2(&rest[fd], &line, &buf);
 	}
 	free(buf);
 	if (ft_strlen(line) > 0)

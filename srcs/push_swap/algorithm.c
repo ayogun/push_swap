@@ -6,13 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 16:36:14 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/04 16:37:32 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/05 14:33:41 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void algorithm(int argc, char **argv)
+void	algorithm(int argc, char **argv)
 {
 	t_stack	*stack_a;
 
@@ -23,10 +23,10 @@ void algorithm(int argc, char **argv)
 		stack_a = ft_parse_args_quoted(argv);
 	else
 	{
-		if(!check_args(argv))
+		if (!check_args(argv))
 			ft_error();
 		else
-			list_args(argv, &stack_a);	
+			list_args(argv, &stack_a);
 	}
 	if (!stack_a || ft_checkdup(stack_a))
 	{
