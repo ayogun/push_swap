@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 12:29:31 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:25 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/06 19:33:07 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ void	ft_freestr(char **lst)
 	*lst = NULL;
 }
 
+// Function to parse the arguments from the quoted string
+// and send them to list_args function to add them into list.
+// With ft_split we split numbers from spaces.
 t_stack	*ft_parse_args_quoted(char **argv)
 {
 	t_stack	*stack_a;

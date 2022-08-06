@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:13 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:48 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/06 19:45:08 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function checks the index of a number
+// 	 in the stack.
 int	ft_find_index(t_stack *a, int nbr)
 {
 	int		i;

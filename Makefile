@@ -6,24 +6,9 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/08/04 16:57:08 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/06 20:13:33 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
-# Colors
-
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
-RED = \033[0;91m
-GREEN = \033[0;92m
-YELLOW = \033[0;93m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
-
-# Colors
 
 NAME = push_swap
 CC = gcc
