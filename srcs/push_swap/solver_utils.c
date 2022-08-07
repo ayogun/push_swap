@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:53:10 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/05 14:36:28 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/07 17:04:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,27 +53,5 @@ int	ft_case_rrarb_a(t_stack *a, t_stack *b, int c)
 	if (ft_find_place_a(a, c))
 		i = ft_lstsize(a) - ft_find_place_a(a, c);
 	i = ft_find_index(b, c) + i;
-	return (i);
-}
-
-int	ft_smallest_a(t_stack *a, t_stack *b)
-{
-	int		i;
-	t_stack	*tmp;
-
-	tmp = b;
-	i = ft_case_rrarrb_a(a, b, b->nbr);
-	while (tmp)
-	{
-		if (i > ft_case_rarb_a(a, b, tmp->nbr))
-			i = ft_case_rarb_a(a, b, tmp->nbr);
-		if (i > ft_case_rrarrb_a(a, b, tmp->nbr))
-			i = ft_case_rrarrb_a(a, b, tmp->nbr);
-		if (i > ft_case_rarrb_a(a, b, tmp->nbr))
-			i = ft_case_rarrb_a(a, b, tmp->nbr);
-		if (i > ft_case_rrarb_a(a, b, tmp->nbr))
-			i = ft_case_rrarb_a(a, b, tmp->nbr);
-		tmp = tmp->next;
-	}
 	return (i);
 }
