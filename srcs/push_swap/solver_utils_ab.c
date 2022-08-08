@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solver_utils_2.c                                   :+:      :+:    :+:   */
+/*   solver_utils_ab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:59:45 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/08 20:56:16 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 22:16:13 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function calculates how many times we should rotate.
 int	ft_case_rarb(t_stack *a, t_stack *b, int c)
 {
 	int	i;
