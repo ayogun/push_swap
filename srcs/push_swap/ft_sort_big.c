@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/07 17:16:00 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 15:52:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,17 @@ t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b)
 void	ft_sort_big(t_stack **stack_a)
 {
 	t_stack	*stack_b;
-	int		i;
 
 	stack_b = NULL;
 	stack_b = ft_sort_b(stack_a);
 	stack_a = ft_sort_a(stack_a, &stack_b);
+	ft_final_arrangement_a(stack_a);
+}
+
+void	ft_final_arrangement_a(t_stack **stack_a)
+{
+	int		i;
+	
 	i = ft_find_index(*stack_a, ft_min(*stack_a));
 	if (i < ft_lstsize(*stack_a) - i)
 	{

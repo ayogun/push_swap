@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/08/07 17:06:11 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/08 20:19:58 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ BONUS_SRC = srcs/checker/checker.c \
 
 OBJ_1 = ${SRC_1:.c=.o}
 OBJ_2 = ${SRC_2:.c=.o}
+
 BONUS_OBJ =${BONUS_SRC:.c=.o}
 
 INCLUDE = -L ./libft -lft
