@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 12:29:31 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/06 19:33:07 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:32:05 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function free the string which is 
+// the integer values in between quotes.
 void	ft_freestr(char **lst)
 {
 	char	*n1;

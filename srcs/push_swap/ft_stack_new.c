@@ -6,13 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 10:29:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/06 19:44:34 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:43:25 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// Creates new stack
+// Creates new stack node with given number.
 t_stack	*ft_stack_new(long content)
 {
 	t_stack	*new;

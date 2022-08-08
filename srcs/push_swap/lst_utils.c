@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 19:01:05 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/04 09:40:14 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:55:35 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function returns the last element of the stack.
 t_stack	*ft_lstlast(t_stack *lst)
 {
 	if (!lst)
@@ -21,6 +22,7 @@ t_stack	*ft_lstlast(t_stack *lst)
 	return (lst);
 }
 
+// This function returns the size of the stack.
 int	ft_lstsize(t_stack *lst)
 {
 	size_t	i;
@@ -34,6 +36,8 @@ int	ft_lstsize(t_stack *lst)
 	return (i);
 }
 
+// This function finds and returns the smallest number
+// in the given stack.
 int	ft_min(t_stack *a)
 {
 	int		i;
@@ -48,6 +52,8 @@ int	ft_min(t_stack *a)
 	return (i);
 }
 
+// This function finds and returns the biggest number
+// in the given stack.
 int	ft_max(t_stack *a)
 {
 	int		i;
@@ -58,29 +64,6 @@ int	ft_max(t_stack *a)
 		if (a->nbr > i)
 			i = a->nbr;
 		a = a->next;
-	}
-	return (i);
-}
-
-int	ft_find_place(t_stack *stack_b, int nbr_push)
-{
-	int		i;
-	t_stack	*tmp;
-
-	i = 1;
-	if (nbr_push > stack_b->nbr && nbr_push < ft_lstlast(stack_b)->nbr)
-		i = 0;
-	else if (nbr_push > ft_max(stack_b) || nbr_push < ft_min(stack_b))
-		i = ft_find_index(stack_b, ft_max(stack_b));
-	else
-	{
-		tmp = stack_b->next;
-		while (stack_b->nbr < nbr_push || tmp->nbr > nbr_push)
-		{
-			stack_b = stack_b->next;
-			tmp = stack_b->next;
-			i++;
-		}
 	}
 	return (i);
 }

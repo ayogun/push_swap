@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/08/08 20:22:29 by yogun            ###   ########.fr        #
+#    Updated: 2022/08/08 21:00:49 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,8 @@ SRC_2 =	srcs/push_swap/algorithm.c \
 		srcs/push_swap/ft_stack_new.c \
 		srcs/push_swap/ft_check_utils.c \
 		srcs/push_swap/ft_parse.c \
-		srcs/push_swap/solver_utils.c \
-		srcs/push_swap/solver_utils_2.c \
+		srcs/push_swap/solver_utils_ab.c \
+		srcs/push_swap/solver_utils_ba.c \
 		srcs/push_swap/ft_print_utils.c \
 		srcs/push_swap/operations.c \
 		srcs/push_swap/operations_2.c \

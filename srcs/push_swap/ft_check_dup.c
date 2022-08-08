@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:16:11 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:54:56 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:30:29 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function checks if the stack includes
+// any duplicate numbers.
 int	ft_checkdup(t_stack *a)
 {
 	t_stack	*tmp;

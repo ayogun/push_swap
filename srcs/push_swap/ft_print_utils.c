@@ -6,21 +6,23 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 16:04:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:32 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 21:03:34 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function rotates both stack_a and stack_b
+// in the same direction as required amount.
 int	ft_print_rarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
-		while ((*a)->nbr != c && ft_find_place(*b, c) > 0)
+		while ((*a)->nbr != c && ft_find_place_b(*b, c) > 0)
 			ft_rr(a, b, 0);
 		while ((*a)->nbr != c)
 			ft_ra(a, 0);
-		while (ft_find_place(*b, c) > 0)
+		while (ft_find_place_b(*b, c) > 0)
 			ft_rb(b, 0);
 		ft_pb(a, b, 0);
 	}
@@ -37,15 +39,17 @@ int	ft_print_rarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
+// This function rotate both stack_a and stack_b in the
+// reverse direction as required amount.
 int	ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
-		while ((*a)->nbr != c && ft_find_place(*b, c) > 0)
+		while ((*a)->nbr != c && ft_find_place_b(*b, c) > 0)
 			ft_rrr(a, b, 0);
 		while ((*a)->nbr != c)
 			ft_rra(a, 0);
-		while (ft_find_place(*b, c) > 0)
+		while (ft_find_place_b(*b, c) > 0)
 			ft_rrb(b, 0);
 		ft_pb(a, b, 0);
 	}
@@ -62,13 +66,15 @@ int	ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
+// This function rotate the stack_a in reverse direction,
+// the stack_b in oppsite direction of stack_a as required amount.
 int	ft_print_rrarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
 		while ((*a)->nbr != c)
 			ft_rra(a, 0);
-		while (ft_find_place(*b, c) > 0)
+		while (ft_find_place_b(*b, c) > 0)
 			ft_rb(b, 0);
 		ft_pb(a, b, 0);
 	}
@@ -83,13 +89,15 @@ int	ft_print_rrarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
+// This function rotate the stack_b in reverse direction,
+// the stack_a in oppsite direction of stack_a as required amount.
 int	ft_print_rarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
 		while ((*a)->nbr != c)
 			ft_ra(a, 0);
-		while (ft_find_place(*b, c) > 0)
+		while (ft_find_place_b(*b, c) > 0)
 			ft_rrb(b, 0);
 		ft_pb(a, b, 0);
 	}

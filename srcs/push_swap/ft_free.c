@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:17:58 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:55:14 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:31:02 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function frees the stack.
 void	ft_free(t_stack **lst)
 {
 	t_stack	*tmp;

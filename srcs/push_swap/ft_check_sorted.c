@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:54:08 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/03 20:54:59 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/08 20:30:45 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function checks if the stack is sorted.
 int	ft_checksorted(t_stack *stack_a)
 {
 	int	i;
