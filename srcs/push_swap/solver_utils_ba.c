@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solver_utils.c                                     :+:      :+:    :+:   */
+/*   solver_utils_ba.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:53:10 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/07 17:04:42 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/09 11:23:11 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function calculates the required amount of rotation.
+// Calculations are done for ra+rb case.
 int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -22,6 +24,8 @@ int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
+// This function calculates the required amount of rotation.
+// Calculations are done for rra+rrb case.
 int	ft_case_rrarrb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -34,6 +38,8 @@ int	ft_case_rrarrb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
+// This function calculates the required amount of rotation.
+// Calculations are done for ra+rrb case.
 int	ft_case_rarrb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -45,6 +51,8 @@ int	ft_case_rarrb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
+// This function calculates the required amount of rotation.
+// Calculations are done for rra+rb case.
 int	ft_case_rrarb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;

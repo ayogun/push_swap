@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:13 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/08 22:17:15 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/09 11:15:56 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int	ft_find_index(t_stack *a, int nbr)
 	return (i);
 }
 
+// This function finds the correct place of the number in stack_b.
+// In other words, it check what index number nbr_push will get 
+// after it is being pushed to the stack_b.
 int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 {
 	int		i;
@@ -51,6 +54,9 @@ int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 	return (i);
 }
 
+// This function finds the correct place of the number in stack_a.
+// In other words, it check what index number nbr_push will get 
+// after it is being pushed to the stack_a.
 int	ft_find_place_a(t_stack *stack_a, int nbr_push)
 {
 	int		i;
