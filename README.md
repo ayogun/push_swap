@@ -57,3 +57,9 @@ non-numeric parameters, duplicates, and invalid/non-existent instructions.
 Using normal ```libc``` functions is strictly forbidden. Students are however, allowed to use: ```write```, ```read```, ```malloc```, ```free```, ```exit```. 
 It must not have any memory leaks. Errors must be handled carefully. <br />
 In no way can it quit in an unexpected manner (segmentation fault, bus error, double free, etc).
+
+## Flowchart
+
+You can take a closer look at it.
+
+<img src="./img/flow-chart.svg"/>
