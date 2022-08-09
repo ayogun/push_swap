@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_utils.c                                   :+:      :+:    :+:   */
+/*   ft_rotate_and_push.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 16:04:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/08 21:03:34 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/09 11:45:17 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // This function rotates both stack_a and stack_b
 // in the same direction as required amount.
-int	ft_print_rarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -41,7 +41,7 @@ int	ft_print_rarb(t_stack **a, t_stack **b, int c, char s)
 
 // This function rotate both stack_a and stack_b in the
 // reverse direction as required amount.
-int	ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -68,7 +68,7 @@ int	ft_print_rrarrb(t_stack **a, t_stack **b, int c, char s)
 
 // This function rotate the stack_a in reverse direction,
 // the stack_b in oppsite direction of stack_a as required amount.
-int	ft_print_rrarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -91,7 +91,7 @@ int	ft_print_rrarb(t_stack **a, t_stack **b, int c, char s)
 
 // This function rotate the stack_b in reverse direction,
 // the stack_a in oppsite direction of stack_a as required amount.
-int	ft_print_rarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{

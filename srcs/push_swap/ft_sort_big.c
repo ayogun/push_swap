@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/08 20:42:46 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/09 11:44:52 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void	ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b)
 		while (i >= 0)
 		{
 			if (i == ft_case_rarb(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rarb(stack_a, stack_b, tmp->nbr, 'a');
+				i = ft_apply_rarb(stack_a, stack_b, tmp->nbr, 'a');
 			else if (i == ft_case_rrarrb(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rrarrb(stack_a, stack_b, tmp->nbr, 'a');
+				i = ft_apply_rrarrb(stack_a, stack_b, tmp->nbr, 'a');
 			else if (i == ft_case_rarrb(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rarrb(stack_a, stack_b, tmp->nbr, 'a');
+				i = ft_apply_rarrb(stack_a, stack_b, tmp->nbr, 'a');
 			else if (i == ft_case_rrarb(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rrarb(stack_a, stack_b, tmp->nbr, 'a');
+				i = ft_apply_rrarb(stack_a, stack_b, tmp->nbr, 'a');
 			else
 				tmp = tmp->next;
 		}
@@ -73,13 +73,13 @@ t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b)
 		while (i >= 0)
 		{
 			if (i == ft_case_rarb_a(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rarb(stack_a, stack_b, tmp->nbr, 'b');
+				i = ft_apply_rarb(stack_a, stack_b, tmp->nbr, 'b');
 			else if (i == ft_case_rarrb_a(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rarrb(stack_a, stack_b, tmp->nbr, 'b');
+				i = ft_apply_rarrb(stack_a, stack_b, tmp->nbr, 'b');
 			else if (i == ft_case_rrarrb_a(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rrarrb(stack_a, stack_b, tmp->nbr, 'b');
+				i = ft_apply_rrarrb(stack_a, stack_b, tmp->nbr, 'b');
 			else if (i == ft_case_rrarb_a(*stack_a, *stack_b, tmp->nbr))
-				i = ft_print_rrarb(stack_a, stack_b, tmp->nbr, 'b');
+				i = ft_apply_rrarb(stack_a, stack_b, tmp->nbr, 'b');
 			else
 				tmp = tmp->next;
 		}
