@@ -63,3 +63,5 @@ In no way can it quit in an unexpected manner (segmentation fault, bus error, do
 You can take a closer look at it.
 
 <img src="./img/flow-chart.svg"/>
+
+Don't forget to open the image in new_tab in order to make zoom in.
