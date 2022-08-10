@@ -6,12 +6,18 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:46:09 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/05 14:44:34 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/10 20:28:51 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function does three things.
+// 1. It checks if the number of input is less than 2.
+// 2. It checks if the number of input is equal to 2.
+//    If it is, it means it is a quoted string.
+// 3. It checks if the number of input is greater than 2.
+//     If it is, it lists the arguements.
 t_stack	*ft_process(int argc, char **argv)
 {
 	t_stack	*stack_a;
