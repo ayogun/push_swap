@@ -6,12 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:51:48 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/05 14:46:05 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/13 10:32:04 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function checks the validity of the commands and stack.
+// If it is valid, and the stack_a is sorted, the program prints "OK". 
 void	ft_checker(t_stack **a, t_stack **b, char *line)
 {
 	char	*tmp;
