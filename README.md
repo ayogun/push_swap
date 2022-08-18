@@ -13,6 +13,7 @@
 3. [Pseudo Code](#psuedo-code)
 4. [Flow Chart](#flowchart)
 5. [Visualizer](#visualizer)
+6. [Checker](#checker)
 
 </br></br>
 
@@ -109,3 +110,9 @@ Don't forget to open the image in new_tab in order to make zoom in.
 ## Visualizer
 
 <img src="./img/push_swap_visualizer.gif">
+
+</br>
+
+## Checker
+
+For furhter detail about checker program, [click here](./srcs/checker/README.md).
