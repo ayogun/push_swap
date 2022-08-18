@@ -2,11 +2,19 @@
 
 </br>
 
-**UNDER CONSTRUCTION**
-
 <img src=https://github.com/caroldaniel/caroldaniel-utils/blob/6b25474bf78299bc7cded8a9c423eebf35fb1d75/push_swapm.png/>
 
 </br>
+
+# Content
+
+1. [Challenge](#challenge)
+2. [Project](#the-project)
+3. [Pseudo Code](#psuedo-code)
+4. [Flow Chart](#flowchart)
+5. [Visualizer](#visualizer)
+
+</br></br>
 
 ## Challenge
 
@@ -58,10 +66,46 @@ Using normal ```libc``` functions is strictly forbidden. Students are however, a
 It must not have any memory leaks. Errors must be handled carefully. <br />
 In no way can it quit in an unexpected manner (segmentation fault, bus error, double free, etc).
 
-## Flowchart
+</br></br>
+
+## Psuedo Code
+
+</br>
+
+1. In order to start sorting, my code pushes first two elements from top of the stack_a to the stack_b. By this way, we are creating one smallest number and one biggest number in stack_b. This is the prerequisites of my code. Because before pushing a number from stack_a to stack_b, one of the major thing the algorithm does is; comparing the number being pushed with the smallest number of stack_b and the biggest number of stack_b.
+
+<img src="./img/first_two.png">
+
+2. At this step, algorithm checks every number in stack_a. It searches the number which requires the minimum amount of operations in order to be placed at stack_b in correct spot.
+
+3. After that, algorithm decides which number should be pushed, it calculates how many times it should rotate stack_a and how many times it should rotate the stack_b. Whicehever has the smallest number, algorithm rotates both of the stacks as the smallest number indicates. And it completes the rest of the rotates in the one single stack which ever stack required more rotate operation. You can watch how this step works in action [here](#visualizer).
+
+4. After this, algorithm pushed the number from the top of the stack_a to top of the stack_b. Every time this spot at stack_b is correct spot for the number thanks to the previous calculations.This pushing loop continues until only three elements are left in stack_a. 
+
+5. Algorithm quickly sorts the left three members in the stack_a.
+
+<img src="./img/last_three.png">
+
+6. Every members in stack_b one by one are being pushed to the stack_a from top to the bottom. However, it checks everytime before the elements are being pushed. This continues until the stack_b is emptied.
+
+<img src="./img/emptied_b.png">
+
+7. Finally, last time required amount of rotation is being applied in order to bring the smallest number on to the top of the stack_a.
+
+<img src="./img/final.png">
+
+</br>
+
+### Flowchart
 
 You can take a closer look at it.
 
 <img src="./img/flow-chart.svg"/>
 
 Don't forget to open the image in new_tab in order to make zoom in.
+
+</br>
+
+## Visualizer
+
+<img src="./img/push_swap_visualizer.gif">
