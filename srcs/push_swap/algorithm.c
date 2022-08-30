@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 16:36:14 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/07 17:11:02 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/30 21:49:14 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	algorithm(int argc, char **argv)
 {
 	t_stack	*stack_a;
 
-	// stack_a = ft_parse(argc, argv);
 	stack_a = NULL;
 	if (argc < 2)
 		ft_error();

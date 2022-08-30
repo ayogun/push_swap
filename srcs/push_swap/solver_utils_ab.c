@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:59:45 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/09 11:21:59 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/30 21:46:54 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	ft_case_rarb(t_stack *a, t_stack *b, int c)
 // This function calculates how many times we should rotate the stacks together.
 // Because after a certain amoun of rotate, we will proceed only with one stack
 // rotation. Since here we have reverse rotate,rather than index number,
-// we check reverse index number which is calculated by list_size - index_number.
+// we check reverse index number which is 
+// calculated by list_size - index_number.
 int	ft_case_rrarrb(t_stack *a, t_stack *b, int c)
 {
 	int	i;

@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/09 11:45:32 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/30 21:49:34 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,5 @@ void		ft_sb(t_stack **b, int j);
 void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
 void		ft_final_arrangement_a(t_stack **stack_a);
-
 
 #endif

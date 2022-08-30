@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/09 11:44:52 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/30 21:48:50 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void	ft_sort_big(t_stack **stack_a)
 void	ft_final_arrangement_a(t_stack **stack_a)
 {
 	int		i;
-	
+
 	i = ft_find_index(*stack_a, ft_min(*stack_a));
 	if (i < ft_lstsize(*stack_a) - i)
 	{

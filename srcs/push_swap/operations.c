@@ -6,13 +6,14 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 20:56:53 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/08 21:09:57 by yogun            ###   ########.fr       */
+/*   Updated: 2022/08/30 21:48:29 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// ra (rotate a) : shift up all elements of stack a by 1. The first element becomes // // the last one.
+// ra (rotate a) : shift up all elements of stack a by 1. 
+// The first element becomes the last one.
 void	ft_ra(t_stack **a, int j)
 {
 	t_stack	*tmp;
@@ -28,7 +29,8 @@ void	ft_ra(t_stack **a, int j)
 		write(1, "ra\n", 3);
 }
 
-// sa (swap a) : swap the first 2 elements at the top of stack a. Do nothing if there /// is only one or no elements).
+// sa (swap a) : swap the first 2 elements at the top of stack a. 
+// Do nothing if there is only one or no elements).
 void	ft_sa(t_stack **a, int j)
 {
 	t_stack	*tmp;
@@ -43,7 +45,8 @@ void	ft_sa(t_stack **a, int j)
 		write(1, "sa\n", 3);
 }
 
-// pa (push a) : take the first element at the top of b and put it at the top of a. Do // nothing if b is empty.
+// pa (push a) : take the first element at the top of b and 
+// put it at the top of a. Do nothing if b is empty.
 void	ft_pa(t_stack **a, t_stack **b, int j)
 {
 	t_stack	*tmp;
@@ -58,7 +61,8 @@ void	ft_pa(t_stack **a, t_stack **b, int j)
 		write(1, "pa\n", 3);
 }
 
-// rra (reverse rotate a) : shift down all elements of stack a by 1. The last element  // becomes the first one.
+// rra (reverse rotate a) : shift down all elements of stack a by 1. 
+// The last element becomes the first one.
 void	ft_rra(t_stack **a, int j)
 {
 	t_stack	*tmp;
