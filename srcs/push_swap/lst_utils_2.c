@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:13 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/09 11:15:56 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 16:18:32 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_find_index(t_stack *a, int nbr)
 	i = 0;
 	while (a->nbr != nbr)
 	{
+		i++;		
 		a = a->next;
-		i++;
 	}
 	a->index = 0;
 	return (i);

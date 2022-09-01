@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/30 21:49:34 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 17:31:01 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_stack
 
 void		list_args(char **argv, t_stack **stack_a);
 void		ft_add_back(t_stack **stack, t_stack *stack_new);
-t_stack		*ft_stack_new(long content);
+t_stack		*ft_stack_new(int content);
 int			check_args(char **argv);
 void		alpha_check(char **argv);
 int			check_error(char **argv, int i, int j);
@@ -88,6 +88,6 @@ t_stack		*ft_process(int argc, char **argv);
 void		ft_sb(t_stack **b, int j);
 void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
-void		ft_final_arrangement_a(t_stack **stack_a);
+t_stack		*ft_sub_process(char **argv);
 
 #endif

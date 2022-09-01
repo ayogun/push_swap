@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/08/30 21:48:50 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 16:32:42 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,36 +88,36 @@ t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b)
 }
 
 // This function sorts the stack_a if there are more 
-// than 3 elements in the stack_a.
-void	ft_sort_big(t_stack **stack_a)
-{
-	t_stack	*stack_b;
-
-	stack_b = NULL;
-	stack_b = ft_sort_b(stack_a);
-	stack_a = ft_sort_a(stack_a, &stack_b);
-	ft_final_arrangement_a(stack_a);
-}
-
-// This function makes final sort in stack_a after
+// than 2 elements in the stack_a.
+// And finally it makes final sort in stack_a after
 // all values pushed to stack_b, sorted and pushed
 // back to stack_a. Because, even the stack_a is
 // sorted at the end, the minimum number have to 
 // at the top of the stack_a. So, it simply brings
 // the smallest number of the stack_a to the top.
-void	ft_final_arrangement_a(t_stack **stack_a)
+void	ft_sort(t_stack **stack_a)
 {
-	int		i;
+	t_stack	*stack_b;
+	int i;
 
-	i = ft_find_index(*stack_a, ft_min(*stack_a));
-	if (i < ft_lstsize(*stack_a) - i)
-	{
-		while ((*stack_a)->nbr != ft_min(*stack_a))
-			ft_ra(stack_a, 0);
-	}
+	stack_b = NULL;
+	if (ft_lstsize(*stack_a) == 2)
+		ft_sa(stack_a, 0);
 	else
 	{
-		while ((*stack_a)->nbr != ft_min(*stack_a))
-			ft_rra(stack_a, 0);
-	}
+		stack_b = ft_sort_b(stack_a);
+		stack_a = ft_sort_a(stack_a, &stack_b);
+		i = ft_find_index(*stack_a, ft_min(*stack_a));
+		if (i < ft_lstsize(*stack_a) - i)
+		{
+			while ((*stack_a)->nbr != ft_min(*stack_a))
+				ft_ra(stack_a, 0);
+		}
+		else
+		{
+			while ((*stack_a)->nbr != ft_min(*stack_a))
+				ft_rra(stack_a, 0);
+		}			
+	}	
+
 }

@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 21:03:37 by yogun             #+#    #+#             */
-/*   Updated: 2022/04/06 02:58:51 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 17:29:17 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	orig = lst;
 	while (orig)
 	{
-		new_node = ft_lstnew(f(orig->content));
+		new_node = ft_stack_new(f(orig->content));
 		if (!new_node)
 		{
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
 		else
-			ft_lstadd_back(&new_lst, new_node);
+			ft_add_back(&new_lst, new_node);
 		orig = orig->next;
 	}
 	return (new_lst);
