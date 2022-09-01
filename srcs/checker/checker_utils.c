@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 20:53:02 by yogun             #+#    #+#             */
-/*   Updated: 2022/09/01 18:02:47 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 18:04:48 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,3 @@ void	ft_error_ch(void)
 	write(1, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
-
