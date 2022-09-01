@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/09/01 17:56:21 by yogun            ###   ########.fr        #
+#    Updated: 2022/09/01 20:23:46 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,6 @@ SRC_2 =	srcs/push_swap/algorithm.c \
 		srcs/push_swap/ft_sort_big.c \
 		srcs/push_swap/ft_sort_three.c \
 		srcs/push_swap/ft_rotate_type.c \
-		srcs/push_swap/process.c \
 		
 BONUS_SRC = srcs/checker/checker.c \
 			srcs/checker/checker_utils.c \

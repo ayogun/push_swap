@@ -6,12 +6,13 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:38:42 by yogun             #+#    #+#             */
-/*   Updated: 2022/09/01 16:32:42 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 20:31:55 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+// This function sort and push stacks until 3 members left behind.
 void	ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b)
 {
 	int		i;
@@ -98,7 +99,7 @@ t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b)
 void	ft_sort(t_stack **stack_a)
 {
 	t_stack	*stack_b;
-	int i;
+	int		i;
 
 	stack_b = NULL;
 	if (ft_lstsize(*stack_a) == 2)
@@ -119,5 +120,4 @@ void	ft_sort(t_stack **stack_a)
 				ft_rra(stack_a, 0);
 		}			
 	}	
-
 }
