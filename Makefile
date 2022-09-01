@@ -6,7 +6,7 @@
 #    By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 13:48:18 by yogun             #+#    #+#              #
-#    Updated: 2022/09/01 16:31:24 by yogun            ###   ########.fr        #
+#    Updated: 2022/09/01 17:56:21 by yogun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,10 +44,10 @@ SRC_2 =	srcs/push_swap/algorithm.c \
 		srcs/push_swap/ft_sort_big.c \
 		srcs/push_swap/ft_sort_three.c \
 		srcs/push_swap/ft_rotate_type.c \
+		srcs/push_swap/process.c \
 		
 BONUS_SRC = srcs/checker/checker.c \
 			srcs/checker/checker_utils.c \
-			srcs/checker/ft_checker.c \
 			
 
 OBJ_1 = ${SRC_1:.c=.o}
@@ -64,7 +64,7 @@ ${NAME}: ${OBJ_1} ${OBJ_2}
 	make -C $(LIBFTDIR)
 	${CC} ${FLAGS} ${OBJ_1} ${OBJ_2} -o ${NAME} ${INCLUDE}
 
-${BONUS}: ${BONUS_OBJ} ${OBJ_2}
+${BONUS}: ${OBJ_2} ${BONUS_OBJ} 
 	make -C $(LIBFTDIR)
 	${CC} ${FLAGS} ${BONUS_OBJ} ${OBJ_2} -o ${BONUS} ${INCLUDE}
 

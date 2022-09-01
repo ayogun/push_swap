@@ -6,7 +6,7 @@
 /*   By: yogun <yogun@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 18:18:24 by yogun             #+#    #+#             */
-/*   Updated: 2022/09/01 17:31:01 by yogun            ###   ########.fr       */
+/*   Updated: 2022/09/01 18:03:22 by yogun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,11 +83,12 @@ int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s);
 void		ft_rrb(t_stack **b, int j);
 void		ft_check_sub(t_stack **a, t_stack **b, char *line);
 char		*ft_check(t_stack **a, t_stack **b, char *line);
-void		ft_checker(t_stack **a, t_stack **b, char *line);
+void		ft_checker_sub(t_stack **a, t_stack **b, char *line);
 t_stack		*ft_process(int argc, char **argv);
 void		ft_sb(t_stack **b, int j);
 void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
 t_stack		*ft_sub_process(char **argv);
+void		ft_error_ch(void);
 
 #endif

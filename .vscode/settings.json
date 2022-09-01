@@ -6,6 +6,7 @@
         "functional": "c",
         "locale": "c",
         "random": "c",
-        "complex": "c"
+        "complex": "c",
+        "push_swap.h": "c"
     }
 }
