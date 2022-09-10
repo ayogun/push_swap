@@ -14,6 +14,7 @@
 4. [Flow Chart](#flowchart)
 5. [Visualizer](#visualizer)
 6. [Checker](#checker)
+7. [Resources](#resources)
 
 </br></br>
 
@@ -116,3 +117,11 @@ Don't forget to open the image in new_tab in order to make zoom in.
 ## Checker
 
 For furhter detail about checker program, [click here](./srcs/checker/README.md).
+
+</br>
+
+## Resources
+
+I wrote an article about how the algorithm works. I strongly recommend you to read the article to grasp the idea:
+
+<a href="https://medium.com/@ayogun/push-swap-c1f5d2d41e97">Push Swap — A journey to find most efficient sorting algorithm </a>
