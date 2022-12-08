@@ -1,5 +1,7 @@
 # Push_Swap
 
+First of all, I strongly suggest you to read [my blog post](https://medium.com/@ayogun/push-swap-c1f5d2d41e97).
+
 </br>
 
 <img src="./img/PUSH SWAP.png">
