@@ -1,6 +1,6 @@
 # Push_Swap
 
-First of all, I strongly suggest you to read [my blog post](https://medium.com/@ayogun/push-swap-c1f5d2d41e97).
+First of all, I strongly suggest you to read [my blog post](https://medium.com/@ayogun/push-swap-c1f5d2d41e97). If you are as lazy as I am and looking for 125 score, you are in right place.
 
 </br>
 
